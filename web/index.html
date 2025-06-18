@@ -5,10 +5,15 @@
 		<title>Minimal Terminal</title>
 
 		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/xterm/css/xterm.css"
+		/>
 	</head>
 	<body>
-		<h1>Hello, Electron!</h1>
+		<div id="terminal"></div>
 
-		<script src="renderer.js" defer></script>
+		<script src="https://cdn.jsdelivr.net/npm/xterm/lib/xterm.js"></script>
+		<script src="renderer.js"></script>
 	</body>
 </html>

@@ -1,0 +1,22 @@
+:root {
+	--background-color: #24273a;
+	--text-color: #cad3f5;
+
+	font-family: "Courier New", Courier, monospace;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+
+	background-color: var(--background-color);
+}
+
+#terminal {
+	height: 100%;
+	width: 100%;
+
+	color: var(--text-color);
+}
