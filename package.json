@@ -1,0 +1,23 @@
+{
+	"name": "minimalterminal",
+	"version": "1.0.0",
+	"description": "a less ugly terminal thingy",
+	"main": "main.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "electron ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Jefernater58/MinimalTerminal.git"
+	},
+	"author": "Freddie Rayner",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Jefernater58/MinimalTerminal/issues"
+	},
+	"homepage": "https://github.com/Jefernater58/MinimalTerminal#readme",
+	"devDependencies": {
+		"electron": "^36.5.0"
+	}
+}
