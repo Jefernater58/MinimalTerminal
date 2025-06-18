@@ -1,4 +1,5 @@
 const { app, BrowserWindow, ipcMain } = require("electron");
+var exec = require("child_process").exec;
 const path = require("path");
 
 function createWindow() {
@@ -18,11 +19,21 @@ function createWindow() {
 
 app.whenReady().then(createWindow);
 
-ipcMain.on("input", (event, input) => {
-	console.log("Received input:", input);
+ipcMain.handle("input", async (event, input) => {
+	return new Promise((resolve, reject) => {
+		exec(input, (error, stdout, stderr) => {
+			if (error) {
+				resolve(error.message);
+			} else if (stderr) {
+				resolve(stderr);
+			} else {
+				resolve(stdout);
+			}
+		});
+	});
 });
 
-ipcMain.handle("get-cwd", (event) => {
+ipcMain.handle("get-cwd", async (event) => {
 	const cwd = process.cwd();
 	return cwd;
 });

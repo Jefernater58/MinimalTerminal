@@ -1,8 +1,9 @@
 :root {
 	--background-color: #24273a;
 	--text-color: #cad3f5;
+	--command-color: #838ba7;
 
-	--font: 16px "Courier New", Courier, monospace;
+	--font: 16px "JetBrains Mono", "Fira Code", monospace;
 }
 
 html,
@@ -16,14 +17,22 @@ body {
 }
 
 #terminal {
+	padding: 10px;
+	box-sizing: border-box;
 	height: 100%;
 	width: 100%;
 	color: var(--text-color);
 }
 
 #prompt {
-	display: flex;
 	width: 100%;
+}
+
+.terminal-line,
+br {
+	white-space: pre;
+	line-height: 0.5;
+	clear: both;
 }
 
 #command-input,
@@ -33,6 +42,6 @@ body {
 	flex: 1;
 	box-sizing: border-box;
 	outline: none;
-	color: var(--text-color);
+	color: var(--command-color);
 	font: var(--font);
 }
