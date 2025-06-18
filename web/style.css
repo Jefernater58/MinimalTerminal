@@ -2,7 +2,7 @@
 	--background-color: #24273a;
 	--text-color: #cad3f5;
 
-	font-family: "Courier New", Courier, monospace;
+	--font: 16px "Courier New", Courier, monospace;
 }
 
 html,
@@ -12,11 +12,27 @@ body {
 	height: 100%;
 
 	background-color: var(--background-color);
+	font: var(--font);
 }
 
 #terminal {
 	height: 100%;
 	width: 100%;
-
 	color: var(--text-color);
+}
+
+#prompt {
+	display: flex;
+	width: 100%;
+}
+
+#command-input,
+#command-input:focus {
+	background-color: transparent;
+	border: none;
+	flex: 1;
+	box-sizing: border-box;
+	outline: none;
+	color: var(--text-color);
+	font: var(--font);
 }

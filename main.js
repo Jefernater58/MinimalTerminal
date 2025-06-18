@@ -18,9 +18,13 @@ function createWindow() {
 
 app.whenReady().then(createWindow);
 
-// Receive input from renderer
 ipcMain.on("input", (event, input) => {
 	console.log("Received input:", input);
+});
+
+ipcMain.handle("get-cwd", (event) => {
+	const cwd = process.cwd();
+	return cwd;
 });
 
 app.on("window-all-closed", () => {
