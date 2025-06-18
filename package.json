@@ -18,10 +18,7 @@
 	},
 	"homepage": "https://github.com/Jefernater58/MinimalTerminal#readme",
 	"devDependencies": {
-		"electron": "^36.5.0"
-	},
-	"dependencies": {
-		"node-pty": "^1.0.0",
-		"xterm": "^5.3.0"
+		"electron": "^36.5.0",
+		"electron-rebuild": "^3.2.9"
 	}
 }
